@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/cmpica
+# catalog-date 2008-11-15 17:22:14 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-cmpica
 Version:	20081115
 Release:	1
@@ -47,6 +53,7 @@ supplied as MetaFont source.
 %{_texmfdistdir}/fonts/tfm/public/cmpica/cmpicab.tfm
 %{_texmfdistdir}/fonts/tfm/public/cmpica/cmpicati.tfm
 %doc %{_texmfdistdir}/doc/latex/cmpica/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ supplied as MetaFont source.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
