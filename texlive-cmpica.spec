@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 An approximate equivalent of the Xerox Pica typeface; the font
@@ -27,20 +26,12 @@ than Computer Modern typewriter. Emphasis for bold-face comes
 from a wavy underline of each letter. The two fonts are
 supplied as MetaFont source.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -54,7 +45,6 @@ supplied as MetaFont source.
 %{_texmfdistdir}/fonts/tfm/public/cmpica/cmpicab.tfm
 %{_texmfdistdir}/fonts/tfm/public/cmpica/cmpicati.tfm
 %doc %{_texmfdistdir}/doc/latex/cmpica/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -65,5 +55,3 @@ supplied as MetaFont source.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
