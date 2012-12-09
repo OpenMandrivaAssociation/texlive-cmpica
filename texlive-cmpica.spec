@@ -55,3 +55,18 @@ supplied as MetaFont source.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20081115-2
++ Revision: 750313
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20081115-1
++ Revision: 718083
+- texlive-cmpica
+- texlive-cmpica
+- texlive-cmpica
+- texlive-cmpica
+- texlive-cmpica
+
