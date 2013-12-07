@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-cmpica
 Version:	20081115
-Release:	5
+Release:	6
 Summary:	A Computer Modern Pica variant
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cmpica
