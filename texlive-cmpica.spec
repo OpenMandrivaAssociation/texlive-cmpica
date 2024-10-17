@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	A Computer Modern Pica variant
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/cmpica
+URL:		https://www.ctan.org/tex-archive/fonts/cmpica
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmpica.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cmpica.doc.r%{version}.tar.xz
